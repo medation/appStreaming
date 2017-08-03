@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Films</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page">
+    
+    <ion-list>
+        <ion-list-header>
+            Dernier films ajoutés :
+        </ion-list-header>
+        <ion-card *ngFor="let item of films" [hidden]="films.count == 0 " (click)="goToDetail(item)" >
+            
+            <div [hidden]="item.nouveau == false" >   
+                <img [src]="item.banner">
+                <div class="card-title">{{item.name}}</div>
+                <div class="card-subtitle">{{item.address}}</div>
+            </div>
+
+        </ion-card>
+    </ion-list>    
+    <ion-list-header [hidden]="films.length > 0">
+        Pas films !
+    </ion-list-header>
+
+
+</ion-content>

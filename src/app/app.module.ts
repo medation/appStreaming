@@ -6,25 +6,13 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 
-import { CardsPage } from '../pages/cards/cards';
-import { ContentPage } from '../pages/content/content';
-import { ItemCreatePage } from '../pages/item-create/item-create';
-import { ItemDetailPage } from '../pages/item-detail/item-detail';
-import { ListMasterPage } from '../pages/list-master/list-master';
-import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
-import { MenuPage } from '../pages/menu/menu';
-import { SearchPage } from '../pages/search/search';
-import { SettingsPage } from '../pages/settings/settings';
-import { SignupPage } from '../pages/signup/signup';
-import { TabsPage } from '../pages/tabs/tabs';
-import { TutorialPage } from '../pages/tutorial/tutorial';
-import { WelcomePage } from '../pages/welcome/welcome';
+import { FilmsData } from '../providers/films-data';
 
-import { Api } from '../providers/api';
-import { Items } from '../mocks/providers/items';
-import { Settings } from '../providers/settings';
-import { User } from '../providers/user';
+import { FilmsPage } from '../pages/films/films';
+import { FilmsDetailPage } from '../pages/films-detail/films-detail';
+import { FilmsWatchPage } from '../pages/films-watch/films-watch';
+
+import { Utility } from '../providers/utility';
 
 import { Camera } from '@ionic-native/camera';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -40,38 +28,14 @@ export function HttpLoaderFactory(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-export function provideSettings(storage: Storage) {
-  /**
-   * The Settings provider takes a set of default settings for your app.
-   *
-   * You can add new settings options at any time. Once the settings are saved,
-   * these values will not overwrite the saved values (this can be done manually if desired).
-   */
-  return new Settings(storage, {
-    option1: true,
-    option2: 'Ionitron J. Framework',
-    option3: '3',
-    option4: 'Hello'
-  });
-}
+
 
 @NgModule({
   declarations: [
     MyApp,
-    CardsPage,
-    ContentPage,
-    ItemCreatePage,
-    ItemDetailPage,
-    ListMasterPage,
-    LoginPage,
-    MapPage,
-    MenuPage,
-    SearchPage,
-    SettingsPage,
-    SignupPage,
-    TabsPage,
-    TutorialPage,
-    WelcomePage
+    FilmsPage,
+    FilmsDetailPage,
+    FilmsWatchPage
   ],
   imports: [
     BrowserModule,
@@ -89,32 +53,19 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CardsPage,
-    ContentPage,
-    ItemCreatePage,
-    ItemDetailPage,
-    ListMasterPage,
-    LoginPage,
-    MapPage,
-    MenuPage,
-    SearchPage,
-    SettingsPage,
-    SignupPage,
-    TabsPage,
-    TutorialPage,
-    WelcomePage
+    FilmsPage,
+    FilmsDetailPage,
+    FilmsWatchPage
   ],
   providers: [
-    Api,
-    Items,
-    User,
     Camera,
     GoogleMaps,
     SplashScreen,
     StatusBar,
-    { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    FilmsData,
+    Utility
   ]
 })
 export class AppModule { }

@@ -1,0 +1,24 @@
+{
+    "films": [{
+            "id": "1",
+            "name": "Split",
+            "desc": "22 personnalité",
+            "banner": "chemin photo",
+            "avis": " !!! ",
+            "lecteur": "Youtube",
+            "lien": "https://www.youtube.com/embed/84TouqfIsiI",
+            "comedie" : true,
+            "nouveau" : true
+        },
+        {
+            "id": "2",
+            "name": "Titanic",
+            "desc": "Bateau cassable",
+            "banner": "chemin photo",
+            "avis": " !!! ",
+            "youwatch": "lien",
+            "comedie" : true,
+            "nouveau" : false
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{film.name}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-fab right top>
+        <button ion-fab color="secondary">
+                <ion-icon name="pin" ></ion-icon>
+            </button>
+    </ion-fab>
+    <ion-card>
+        <img [src]="film.banner">
+        
+    </ion-card>
+    
+    <ion-card>
+        <ion-card-header>
+            <b>Infos sur le film</b>
+        </ion-card-header>
+        <ion-item text-wrap>
+            <ion-icon name="ion-ios-information" color="primary" item-left large></ion-icon>
+            <h2></h2>
+            <p>{{film.desc}}</p>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-icon name="ion-android-bus" item-left large color="primary"></ion-icon>
+            <h2></h2>
+            <p>Loin de vous</p>
+        </ion-item>
+    </ion-card>
+
+    <ion-card>
+
+        <ion-row>
+            
+            <ion-col center text-center>
+                <button ion-button icon-left clear small color="light" (click)="goToWatch(film)">
+                    <ion-icon name="md-play"></ion-icon>
+                    <div>{{film.lecteur}}</div>
+                 </button>
+            </ion-col>
+
+        </ion-row>
+
+    </ion-card>
+
+
+
+
+</ion-content>
