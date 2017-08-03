@@ -13,12 +13,12 @@ import { Utility } from '../../providers/utility';
 
 
 @Component({
-  selector: 'page-films',
-  templateUrl: 'films.html'
+  selector: 'page-films-categorie',
+  templateUrl: 'films-categorie.html'
 })
-export class FilmsPage {
+export class FilmsCategoriePage {
 
-  categorie = "Dernier films sortis";
+  categorie : any;
   films = [];
   address;
   actionSheet: ActionSheet;
@@ -34,10 +34,9 @@ export class FilmsPage {
     public actionSheetCtrl: ActionSheetController
   ) {
     
-    if(this.navParams.get("item"))
-      {
-        this.categorie = navParams.data; 
-      }
+    
+      this.categorie = navParams.data; 
+      
       
   }
 

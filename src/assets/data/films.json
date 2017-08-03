@@ -3,22 +3,115 @@
             "id": "1",
             "name": "Split",
             "desc": "22 personnalité",
-            "banner": "chemin photo",
+            "banner": "assets/img/split.jpg",
             "avis": " !!! ",
-            "lecteur": "Youtube",
-            "lien": "https://www.youtube.com/embed/84TouqfIsiI",
-            "comedie" : true,
+            "lecteurs": [
+                            {
+                                "lecteur":"youtube",
+                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                            },
+                            {
+                                "lecteur":"openload",
+                                "lien": "ici lien"
+                            }
+                        ],
+            "genre" : ["Comédie","Thriller"],
             "nouveau" : true
         },
         {
             "id": "2",
             "name": "Titanic",
             "desc": "Bateau cassable",
-            "banner": "chemin photo",
+            "banner": "assets/img/titanic.jpg",
             "avis": " !!! ",
-            "youwatch": "lien",
-            "comedie" : true,
+            "lecteurs": [
+                            {
+                                "lecteur":"youtube",
+                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                            },
+                            {
+                                "lecteur":"rutube",
+                                "lien": "ici lien"
+                            }
+                        ],
+            "genre" : ["Romance"],
             "nouveau" : false
+        },
+        {
+            "id": "3",
+            "name": "The shawshank rédemption",
+            "desc": "Prison break",
+            "banner": "assets/img/shawshank.jpg",
+            "avis": " !!! ",
+            "lecteurs": [
+                            {
+                                "lecteur":"youtube",
+                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                            },
+                            {
+                                "lecteur":"openload",
+                                "lien": "ici lien"
+                            }
+                        ],
+            "genre" : ["Thriller"],
+            "nouveau" : true
+        },
+        {
+            "id": "4",
+            "name": "The god father",
+            "desc": "who is he ?",
+            "banner": "assets/img/godfather.jpg",
+            "avis": " !!! ",
+            "lecteurs": [
+                            {
+                                "lecteur":"youtube",
+                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                            },
+                            {
+                                "lecteur":"openload",
+                                "lien": "ici lien"
+                            }
+                        ],
+            "genre" : ["Comédie","Thriller"],
+            "nouveau" : false
+        },
+        {
+            "id": "5",
+            "name": "Dark knight",
+            "desc": "batmane",
+            "banner": "assets/img/darknight.jpg",
+            "avis": " !!! ",
+            "lecteurs": [
+                            {
+                                "lecteur":"youtube",
+                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                            },
+                            {
+                                "lecteur":"openload",
+                                "lien": "ici lien"
+                            }
+                        ],
+            "genre" : ["Fantastique","Thriller","Action"],
+            "nouveau" : true
+        },
+        {
+            "id": "6",
+            "name": "Angry man",
+            "desc": "L'ji3ane",
+            "banner": "assets/img/angryman.jpg",
+            "avis": " !!! ",
+            "lecteurs": [
+                            {
+                                "lecteur":"youtube",
+                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                            },
+                            {
+                                "lecteur":"openload",
+                                "lien": "ici lien"
+                            }
+                        ],
+            "genre" : ["Comedie"],
+            "nouveau" : true
         }
     ]
 }

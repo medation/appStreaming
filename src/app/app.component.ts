@@ -1,42 +1,36 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, Config } from 'ionic-angular';
+import { Platform, Nav, Config, App } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FilmsPage } from '../pages/films/films';
+import { FilmsCategoriePage } from '../pages/films-categorie/films-categorie';
 
 import { TranslateService } from '@ngx-translate/core'
 
-@Component({
-  template: `<ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
-    </ion-header>
 
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
 
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
-})
+@Component({ templateUrl:'app.html'  })
+
+
 export class MyApp {
   rootPage = FilmsPage;
+  pages: Array<{title: string,icon:string}>;
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
-    { title: 'Movie',icon:'headset', component: FilmsPage },
-  ]
+  
 
-  constructor(private translate: TranslateService, private platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private translate: TranslateService, private platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public app: App) {
     this.initTranslate();
+    this.pages = [
+                    { title: 'Comédie',icon:'film'},
+                    { title: 'Horreur',icon:'film'},
+                    { title: 'Romance',icon:'film'},
+                    { title: 'Action',icon:'film'},
+                    { title: 'Thriller',icon:'film'},
+                    { title: 'Fantastique',icon:'film'}
+                 ]
   }
 
   ionViewDidLoad() {
@@ -63,9 +57,10 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  openPage(item) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    let nav = this.app.getRootNav();
+    nav.push(FilmsCategoriePage, item);
   }
 }

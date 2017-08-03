@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { FilmsData } from '../providers/films-data';
 
 import { FilmsPage } from '../pages/films/films';
+import { FilmsCategoriePage } from '../pages/films-categorie/films-categorie';
 import { FilmsDetailPage } from '../pages/films-detail/films-detail';
 import { FilmsWatchPage } from '../pages/films-watch/films-watch';
 
@@ -34,6 +35,7 @@ export function HttpLoaderFactory(http: Http) {
   declarations: [
     MyApp,
     FilmsPage,
+    FilmsCategoriePage,
     FilmsDetailPage,
     FilmsWatchPage
   ],
@@ -54,6 +56,7 @@ export function HttpLoaderFactory(http: Http) {
   entryComponents: [
     MyApp,
     FilmsPage,
+    FilmsCategoriePage,
     FilmsDetailPage,
     FilmsWatchPage
   ],

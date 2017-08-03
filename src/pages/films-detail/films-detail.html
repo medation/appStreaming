@@ -7,7 +7,7 @@
 <ion-content>
     <ion-fab right top>
         <button ion-fab color="secondary">
-                <ion-icon name="pin" ></ion-icon>
+                <ion-icon name="film" ></ion-icon>
             </button>
     </ion-fab>
     <ion-card>
@@ -31,15 +31,15 @@
         </ion-item>
     </ion-card>
 
-    <ion-card>
+    <ion-card *ngFor="let item of film.lecteurs" [hidden]="film.lecteurs.count == 0 " >
 
         <ion-row>
             
             <ion-col center text-center>
-                <button ion-button icon-left clear small color="light" (click)="goToWatch(film)">
-                    <ion-icon name="md-play"></ion-icon>
-                    <div>{{film.lecteur}}</div>
-                 </button>
+                    <button ion-button icon-left clear small color="light" (click)="goToWatch(item)">
+                        <ion-icon name="md-play"></ion-icon>
+                        <div>{{item.lecteur}}</div>
+                    </button>
             </ion-col>
 
         </ion-row>

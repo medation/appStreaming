@@ -10,10 +10,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class FilmsWatchPage {
   
-  film: any;
+  lecteur: any;
 
   constructor(public navParams: NavParams, public sanitizer: DomSanitizer) {
-    this.film = navParams.data;
+    this.lecteur = navParams.data;
   }
 
   

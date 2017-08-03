@@ -1,13 +1,15 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>{{film.name}}</ion-title>
+        <ion-title>{{lecteur.lecteur}}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content overflow-scroll="true">
     
     
-    <iframe src="sanitizer.bypassSecurityTrustResourceUrl({{film.lien}})" frameborder="0" width="100%" height="315"></iframe>
+<!--    <iframe src="sanitizer.bypassSecurityTrustResourceUrl({{lecteur.lien}})" frameborder="0" width="100%" height="315"></iframe>
+-->
+{{lecteur.lien}}
 
 
 </ion-content>
