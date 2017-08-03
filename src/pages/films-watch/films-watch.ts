@@ -13,11 +13,13 @@ import {SafeResourceUrl} from '@angular/platform-browser';
 export class FilmsWatchPage {
   
   lecteur: any;
-  videoUrl: SafeResourceUrl;
+  videoUrlVf: SafeResourceUrl;
+  videoUrlVostfr: SafeResourceUrl;
 
   constructor(private domSanitizer: DomSanitizer, public navParams: NavParams, public sanitizer: DomSanitizer) {
     this.lecteur = navParams.data;
-    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.lecteur.lien)
+    this.videoUrlVf = this.domSanitizer.bypassSecurityTrustResourceUrl(this.lecteur.lienVf);
+    this.videoUrlVostfr = this.domSanitizer.bypassSecurityTrustResourceUrl(this.lecteur.lienVostfr)
   }
 
   

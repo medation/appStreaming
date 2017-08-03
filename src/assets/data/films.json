@@ -8,11 +8,13 @@
             "lecteurs": [
                             {
                                 "lecteur":"youtube",
-                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                                "lienVf": "https://www.youtube.com/embed/84TouqfIsiI",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             },
                             {
                                 "lecteur":"openload",
-                                "lien": "ici lien"
+                                "lienVf": "ici lien",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             }
                         ],
             "genre" : ["Comédie","Thriller"],
@@ -27,11 +29,13 @@
             "lecteurs": [
                             {
                                 "lecteur":"youtube",
-                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                                "lienVf": "https://www.youtube.com/embed/84TouqfIsiI",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             },
                             {
                                 "lecteur":"rutube",
-                                "lien": "ici lien"
+                                "lienVf": "ici lien",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             }
                         ],
             "genre" : ["Romance"],
@@ -46,11 +50,13 @@
             "lecteurs": [
                             {
                                 "lecteur":"youtube",
-                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                                "lienVf": "https://www.youtube.com/embed/84TouqfIsiI",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             },
                             {
                                 "lecteur":"openload",
-                                "lien": "ici lien"
+                                "lienVf": "ici lien",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             }
                         ],
             "genre" : ["Thriller"],
@@ -65,11 +71,13 @@
             "lecteurs": [
                             {
                                 "lecteur":"youtube",
-                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                                "lienVf": "https://www.youtube.com/embed/84TouqfIsiI",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             },
                             {
                                 "lecteur":"openload",
-                                "lien": "ici lien"
+                                "lienVf": "ici lien",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             }
                         ],
             "genre" : ["Comédie","Thriller"],
@@ -84,11 +92,13 @@
             "lecteurs": [
                             {
                                 "lecteur":"youtube",
-                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                                "lienVf": "https://www.youtube.com/embed/84TouqfIsiI",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             },
                             {
                                 "lecteur":"openload",
-                                "lien": "ici lien"
+                                "lienVf": "ici lien",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             }
                         ],
             "genre" : ["Fantastique","Thriller","Action"],
@@ -103,11 +113,13 @@
             "lecteurs": [
                             {
                                 "lecteur":"youtube",
-                                "lien": "https://www.youtube.com/embed/84TouqfIsiI"
+                                "lienVf": "https://www.youtube.com/embed/84TouqfIsiI",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             },
                             {
                                 "lecteur":"openload",
-                                "lien": "ici lien"
+                                "lienVf": "ici lien",
+                                "lienVostfr": "https://www.youtube.com/embed/84TouqfIsiI"
                             }
                         ],
             "genre" : ["Comedie"],
