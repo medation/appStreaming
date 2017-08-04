@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import {ActionSheet, ActionSheetController, AlertController, App, ModalController, NavController } from 'ionic-angular';
-import { NavParams } from 'ionic-angular';
+import { NavParams, MenuController } from 'ionic-angular';
 
 // import moment from 'moment';
 
@@ -25,6 +25,7 @@ export class FilmsPage {
 
   constructor(
     public alertCtrl: AlertController,
+    public menu: MenuController,
     public app: App,
     public navParams: NavParams,
     public modalCtrl: ModalController,
@@ -34,10 +35,7 @@ export class FilmsPage {
     public actionSheetCtrl: ActionSheetController
   ) {
     
-    if(this.navParams.get("item"))
-      {
-        this.categorie = navParams.data; 
-      }
+    
       
   }
 
@@ -65,6 +63,7 @@ export class FilmsPage {
 
 
   goToDetail(item) {
+    this.menu.close();
     let nav = this.app.getRootNav();
     nav.push(FilmsDetailPage, item);
   } 

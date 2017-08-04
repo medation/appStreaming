@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, Config, App } from 'ionic-angular';
+import { Platform, Nav,MenuController, Config, App } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +21,7 @@ export class MyApp {
 
   
 
-  constructor(private translate: TranslateService, private platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public app: App) {
+  constructor(private translate: TranslateService,public menu: MenuController, private platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public app: App) {
     this.initTranslate();
     this.pages = [
                     { title: 'Comédie',icon:'film'},
@@ -60,6 +60,7 @@ export class MyApp {
   openPage(item) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
+    this.menu.close();
     let nav = this.app.getRootNav();
     nav.push(FilmsCategoriePage, item);
   }
